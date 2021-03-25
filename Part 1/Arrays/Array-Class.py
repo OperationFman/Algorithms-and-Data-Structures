@@ -18,6 +18,7 @@ print(array[1])
 array.pop(0)
 print(array)
 
+# Check if index exists before popping, throws error if it doesn't
 def removeIndex(index):
     try:
         array.pop(index)
@@ -25,5 +26,7 @@ def removeIndex(index):
         print('Index out of range')
 removeIndex(2)
 
+# Insert an element at a given index and move everything else up
+# If it's too high it'll just go on the end, swell!
 array.insert(1, 9000)
 print(array)
