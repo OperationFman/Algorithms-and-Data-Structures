@@ -10,4 +10,8 @@ class LinkedList:
     def __init__(self):
         self.head = None
 
-        
+    def node(self, data):
+        self.data = data
+        self.next = None
+
+    def __repr__(self):
