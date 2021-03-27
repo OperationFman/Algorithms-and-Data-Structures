@@ -27,8 +27,20 @@ class LinkedList:
         cur = self.head
         while cur.next != None:
             cur = cur.next
-            elements.append(cur)
+            elements.append(cur.data)
         print(elements)
+
+    def getIndex(self, index):
+        if index >= self.length():
+            print("Index out of range")
+            return None
+        cur = self.head
+        cur_index = 0
+        while True:
+            cur = cur.next
+            if cur_index == index:
+                return cur.data
+            cur_index += 1
 
 llist = LinkedList()
 
@@ -36,4 +48,5 @@ llist.addLast(1)
 llist.addLast(2)
 llist.addLast(3)
 
-print(llist.contains())
+llist.contains()
+print(llist.getIndex(2))
