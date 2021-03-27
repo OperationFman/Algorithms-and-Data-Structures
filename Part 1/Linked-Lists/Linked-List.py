@@ -86,6 +86,7 @@ class LinkedList:
             self.addFirst(i)
 
     def kth(self, value):
+        """Apparently value should be the index but that'd just be a reversed getIndex..?"""
         endCounter = 1
         countToEnd = False
         cur = self.head
