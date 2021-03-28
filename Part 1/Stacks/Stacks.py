@@ -21,10 +21,8 @@ class Stack:
                 stack.append(i)
             if i in closeBrackets:
                 c = closeBrackets.index(i)
-                o = openBrackets[c]
-                if o == stack[-1]:
+                if openBrackets[c] == stack[-1]:
                     stack.pop()
-                    print(stack)
         if stack == []:
             return 'String is balanced'
         else:
