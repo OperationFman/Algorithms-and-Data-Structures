@@ -14,12 +14,13 @@ class Stack:
             if i in closeBrackets:
                 c = closeBrackets.index(i)
                 o = openBrackets[c]
-                if o != stack[-1]:
-                    return 'String is not balanced'
-                stack.pop()
-        if stack == False:
+                if o == stack[-1]:
+                    stack.pop()
+                    print(stack)
+        if stack == []:
             return 'String is balanced'
-        return 'String is not balanced'
+        else:
+            return 'String is not balanced'
             
 
 
@@ -27,4 +28,4 @@ class Stack:
 stack = Stack()
 # print(stack.reverseString('Hello there'))
 
-print(stack.balancedExpression('(hi)'))
+print(stack.balancedExpression(''))
