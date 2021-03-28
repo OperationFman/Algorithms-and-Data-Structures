@@ -37,8 +37,8 @@ class Stack:
 
 
 stack = Stack()
-# print(stack.reverseString('Hello there'))
-# print(stack.balancedExpression(''))
+print(stack.reverseString('Hello there'))
+print(stack.balancedExpression('(1 + 2 + (3 x b) = [a] / [c]) + <5>'))
 
 stack.push1('hello')
 stack.push1('there')
