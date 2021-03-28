@@ -1,6 +1,8 @@
 class Stack:
     def reverseString(self, string):
-        return string[::-1]
+        if type(string) is str:
+            return string[::-1]
+        return 'Error: Not a string'
 
 
 
