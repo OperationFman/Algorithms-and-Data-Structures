@@ -3,6 +3,10 @@ class Stack:
         self.stack1 = []
         self.stack2 = []
 
+    def view(self):
+        print(self.stack1)
+        print(self.stack2)
+
     def reverseString(self, string):
         if type(string) is str:
             return string[::-1]
@@ -29,9 +33,17 @@ class Stack:
     def push1(self, value):
         self.stack1.append(value)
 
+    def push2(self, value):
+        self.stack2.append(value)
+
 
 
 stack = Stack()
-print(stack.stack1)
 # print(stack.reverseString('Hello there'))
 # print(stack.balancedExpression(''))
+
+stack.push1('hello')
+stack.push1('there')
+stack.push2('general')
+stack.push2('kenobi')
+stack.view()
