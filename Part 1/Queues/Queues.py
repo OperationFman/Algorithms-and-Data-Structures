@@ -23,6 +23,8 @@ class Queue:
         return True
 
     def pointers(self, start, end):
+        if start > len(self.array) or end > len(self.array):
+            return 'Start or End selection out of range'
         selection = self.array[start:end]
         return selection
 
