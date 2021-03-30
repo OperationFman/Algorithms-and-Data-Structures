@@ -9,7 +9,15 @@ class Hash:
             if counter == 1:
                 return char
 
+    def firstRepeated(self, string):
+        string = string.replace(" ", "")
+        for char in string:
+            counter = string.count(char)
+            if counter >= 2:
+                return char
+
 hash = Hash()
-string = 'hello there'
+string = 'general kenobi'
 
 print(hash.firstNonRepeated(string))
+print(hash.firstRepeated(string))
