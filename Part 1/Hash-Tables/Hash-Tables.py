@@ -1,7 +1,11 @@
 class Hash:
     def firstNonRepeated(self, string):
+        string = string.replace(" ", "")
+        memory = {}
         for char in string:
-            print(char)
+            memory[char] = ""
+
+        print(memory)
 
 hash = Hash()
 string = 'hello there'
