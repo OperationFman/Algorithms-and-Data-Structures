@@ -1,12 +1,15 @@
-from collections import Counter
 
 class Hash:
     def firstNonRepeated(self, string):
         string = string.replace(" ", "")
-        memory = Counter(string)
-        print(memory)
+        # memory = {}
+        for char in string:
+            counter = string.count(char)
+            # memory[char] = counter
+            if counter == 1:
+                return char
 
 hash = Hash()
 string = 'hello there'
 
-hash.firstNonRepeated(string)
+print(hash.firstNonRepeated(string))
