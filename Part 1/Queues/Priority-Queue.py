@@ -6,16 +6,14 @@ class PriQue:
         print(self.priorityArray)
 
     def insert(self, item):
-        count = 0
-        if self.priorityArray == False:
+        if self.priorityArray == []:
             self.priorityArray.append(item)
-        for i in self.priorityArray:
-            if item >= i:
-                self.priorityArray.insert(count, item)
-                print('hit')
-                break
-            else:
-                count += 1
+        else:
+            for i in self.priorityArray:
+                if item >= i:
+                    print('hit')
+                    index = self.priorityArray.index(i) + 1
+                    self.priorityArray.insert(index, item)
     
 pq = PriQue()
 pq.view()
