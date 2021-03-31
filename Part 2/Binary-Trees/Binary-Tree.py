@@ -52,3 +52,7 @@ node.insert(17)
 
 print(node.find(55))
 print(node.find(5))
+
+preOrder = [20, 10, 6, 3, 8, 14, 30, 24, 26]
+inOrder = [3, 6, 8, 10, 14, 24, 26, 30]
+postOrder = [3, 8, 6, 14, 10, 26, 24, 30, 20]
