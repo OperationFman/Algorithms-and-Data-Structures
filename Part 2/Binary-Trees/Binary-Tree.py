@@ -26,18 +26,17 @@ class Node:
         else:
             self.data = item
 
-    def find(self, item):
-        cur = self.data
-        history = []
-        while item != cur:
-            if item < self.left.data:
-                history.append(cur)
-                cur = self.left.data
-            elif item > self.right.data:
-                history.append(cur)
-                cur = self.right.data
-        print(cur)
-        print(history)
+    def findval(self, item):
+        if item < self.data:
+            if self.left is None:
+                return str(item)+" Not Found"
+            return self.left.findval(item)
+        elif item > self.data:
+            if self.right is None:
+                return str(item)+" Not Found"
+            return self.right.findval(item)
+        else:
+            print(str(self.data) + ' is found')
         
 
 node = Node(10)
@@ -51,4 +50,5 @@ node.insert(12)
 node.insert(18)
 node.insert(17)
 
-node.find(15)
+print(node.findval(55))
+print(node.findval(5))
