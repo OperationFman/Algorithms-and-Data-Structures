@@ -26,6 +26,20 @@ class Node:
         else:
             self.data = item
 
+    def find(self, item):
+        cur = self.data
+        history = []
+        while item != cur:
+            if item < self.left.data:
+                history.append(cur)
+                cur = self.left.data
+            elif item > self.right.data:
+                history.append(cur)
+                cur = self.right.data
+        print(cur)
+        print(history)
+        
+
 node = Node(10)
 
 node.insert(5)
@@ -37,4 +51,4 @@ node.insert(12)
 node.insert(18)
 node.insert(17)
 
-node.print()
+node.find(15)
