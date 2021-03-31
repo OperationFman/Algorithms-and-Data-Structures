@@ -50,9 +50,9 @@ class Node:
         if root is None:
             return 0
         
-        return self.findMax(self.treeHeight(root.left), self.treeHeight(root.right)) + 1
+        return self._findMax(self.treeHeight(root.left), self.treeHeight(root.right)) + 1
 
-    def findMax(self, a, b):
+    def _findMax(self, a, b):
         if a >= b:
             return a
         else:
@@ -73,5 +73,5 @@ node.insert(17)
 # print(node.find(55))
 # print(node.find(5))
 
-print(node.travPreOrder(node))
-print(node.treeHeight(node))
+# print(node.travPreOrder(node))
+# print(node.treeHeight(node))
