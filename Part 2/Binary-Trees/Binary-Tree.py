@@ -5,7 +5,8 @@ class Node:
         self.right = None
 
 class BinaryTree():
-    pass
+    def __init__(self):
+        self.root = None
 
 
 tree = BinaryTree()
