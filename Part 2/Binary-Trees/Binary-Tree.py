@@ -26,15 +26,15 @@ class Node:
         else:
             self.data = item
 
-    def findval(self, item):
+    def find(self, item):
         if item < self.data:
             if self.left is None:
                 return str(item)+" Not Found"
-            return self.left.findval(item)
+            return self.left.find(item)
         elif item > self.data:
             if self.right is None:
                 return str(item)+" Not Found"
-            return self.right.findval(item)
+            return self.right.find(item)
         else:
             print(str(self.data) + ' is found')
         
@@ -50,5 +50,5 @@ node.insert(12)
 node.insert(18)
 node.insert(17)
 
-print(node.findval(55))
-print(node.findval(5))
+print(node.find(55))
+print(node.find(5))
