@@ -37,6 +37,14 @@ class Node:
             return self.right.find(item)
         else:
             print(str(self.data) + ' is found')
+    
+    def travPreOrder(self, root):
+        result = []
+        if root:
+            result.append(root.data)
+            result = result + self.travPreOrder(root.left)
+            result = result + self.travPreOrder(root.right)
+        return result
         
 
 node = Node(10)
@@ -50,9 +58,7 @@ node.insert(12)
 node.insert(18)
 node.insert(17)
 
-print(node.find(55))
-print(node.find(5))
+# print(node.find(55))
+# print(node.find(5))
 
-preOrder = [20, 10, 6, 3, 8, 14, 30, 24, 26]
-inOrder = [3, 6, 8, 10, 14, 24, 26, 30]
-postOrder = [3, 8, 6, 14, 10, 26, 24, 30, 20]
+print(node.travPreOrder(node))
