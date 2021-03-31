@@ -46,6 +46,18 @@ class Node:
             result = result + self.travPreOrder(root.right)
         return result
         
+    def treeHeight(self, root):
+        if root is None:
+            return 0
+        
+        return self.findMax(self.treeHeight(root.left), self.treeHeight(root.right)) + 1
+
+    def findMax(self, a, b):
+        if a >= b:
+            return a
+        else:
+            return b
+
 
 node = Node(10)
 
@@ -62,3 +74,4 @@ node.insert(17)
 # print(node.find(5))
 
 print(node.travPreOrder(node))
+print(node.treeHeight(node))
