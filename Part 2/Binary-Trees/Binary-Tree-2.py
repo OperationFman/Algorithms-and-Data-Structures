@@ -60,23 +60,18 @@ class BinaryTree:
 			return None
 
 	def _find(self, item, cur):
-		if item==cur.data:
+		if item == cur.data:
 			return cur
 		elif item < cur.data and cur.left != None:
 			return self._find(item, cur.left)
 		elif item > cur.data and cur.right != None:
 			return self._find(item, cur.right)
 
-	def delete_value(self,value):
-		return self.delete_node(self.find(value))
+	def delete_item(self, item):
+		return self.delete_node(self.find(item))
 
-	def delete_node(self,node):
-
-		## -----
-		# Improvements since prior lesson
-
-		# Protect against deleting a node not found in the tree
-		if node==None or self.find(node.value)==None:
+	def delete_node(self, node):
+		if node == None or self.find(node.value)==None:
 			print("Node to be deleted not found in the tree!")
 			return None 
 		## -----
