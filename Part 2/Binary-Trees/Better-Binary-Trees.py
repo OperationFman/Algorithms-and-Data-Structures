@@ -93,7 +93,8 @@ tree.insert(99)
 tree.insert(5)
 print("The following is the ordered print out:")
 tree.view()
-tree.insert(2)
+
+tree.insert(2) # Prexisiting
 
 print("Tree height is: " + str(tree.height()))
 
