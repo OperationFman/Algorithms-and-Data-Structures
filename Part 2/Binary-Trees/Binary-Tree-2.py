@@ -6,5 +6,13 @@ class Node:
 
 class BinaryTree:
     def __init__(self, root):
-        self.root = Node(root)
+        self.root = None
 
+    def insert(self, data):
+        if self.root == None:
+            self.root = Node(data)
+        else:
+            return self._insert(data)
+
+    def _insert(self, data):
+        pass
