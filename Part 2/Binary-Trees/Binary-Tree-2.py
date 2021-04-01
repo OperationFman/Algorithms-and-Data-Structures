@@ -33,14 +33,13 @@ class BinaryTree:
 
     def view(self):
         if self.root != None:
-            return self._view(self.root)
-
+            self._view(self.root)
+            
     def _view(self, cur):
         if cur != None:
+            print (str(cur.data))
             self._view(cur.left)
-            print(cur.data)
             self._view(cur.right)
-            print(cur.data)
 
 tree = BinaryTree()
 tree.insert(9)
