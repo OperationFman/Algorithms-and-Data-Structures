@@ -35,8 +35,12 @@ class BinaryTree:
         if self.root != None:
             return self._view(self.root)
 
-    def _view(self, item):
-        pass
+    def _view(self, cur):
+        if cur != None:
+            self._view(cur.left)
+            print(cur.data)
+            self._view(cur.right)
+            print(cur.data)
 
 tree = BinaryTree()
 tree.insert(9)
@@ -44,3 +48,5 @@ tree.insert(5)
 tree.insert(11)
 tree.insert(1)
 tree.insert(9)
+
+tree.view()
