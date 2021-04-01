@@ -53,19 +53,19 @@ class BinaryTree:
 		right_height = self._height(cur.right, cur_height + 1)
 		return max(left_height, right_height)
 
-	def find(self,value):
-		if self.root!=None:
-			return self._find(value,self.root)
+	def find(self, item):
+		if self.root != None:
+			return self._find(item, self.root)
 		else:
 			return None
 
-	def _find(self,value,cur_node):
-		if value==cur_node.value:
-			return cur_node
-		elif value<cur_node.value and cur_node.left_child!=None:
-			return self._find(value,cur_node.left_child)
-		elif value>cur_node.value and cur_node.right_child!=None:
-			return self._find(value,cur_node.right_child)
+	def _find(self, item, cur):
+		if item==cur.data:
+			return cur
+		elif item < cur.data and cur.left != None:
+			return self._find(item, cur.left)
+		elif item > cur.data and cur.right != None:
+			return self._find(item, cur.right)
 
 	def delete_value(self,value):
 		return self.delete_node(self.find(value))
