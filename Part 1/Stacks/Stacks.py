@@ -22,6 +22,8 @@ class Stack:
                     stack.append(i)
                 if i in closeBrackets:
                     c = closeBrackets.index(i)
+                    if openBrackets[c] not in stack:
+                        return False
                     if openBrackets[c] == stack[-1]:
                         stack.pop()
             if stack == []:
