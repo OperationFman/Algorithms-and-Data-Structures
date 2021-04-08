@@ -13,20 +13,23 @@ class Stack:
         return 'Error: Not a string'
 
     def balancedExpression(self, string):
-        stack = []
-        openBrackets = ['(', '{', '[', '<']
-        closeBrackets = [')', '}', ']', '>']
-        for i in string:
-            if i in openBrackets:
-                stack.append(i)
-            if i in closeBrackets:
-                c = closeBrackets.index(i)
-                if openBrackets[c] == stack[-1]:
-                    stack.pop()
-        if stack == []:
-            return 'String is balanced'
-        else:
-            return 'String is not balanced'   
+        try:
+            stack = []
+            openBrackets = ['(', '{', '[', '<']
+            closeBrackets = [')', '}', ']', '>']
+            for i in string:
+                if i in openBrackets:
+                    stack.append(i)
+                if i in closeBrackets:
+                    c = closeBrackets.index(i)
+                    if openBrackets[c] == stack[-1]:
+                        stack.pop()
+            if stack == []:
+                return 'String is balanced'
+            else:
+                return 'String is not balanced'
+        except IndexError:
+            return 'String is not balanced'
 
     def push1(self, value):
         self.stack1.append(value)
