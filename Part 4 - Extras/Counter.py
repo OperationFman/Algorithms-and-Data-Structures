@@ -14,3 +14,11 @@ for key in count:
 print('Loop via order of indexes:')
 for key, value in enumerate(count):
     print(key, value)
+
+print('Get most common value')
+counter = Counter(array)
+commons = counter.most_common()
+# Result: [(2, 5), (1, 4), (6, 2), (5, 2), (3, 1), (4, 1), (8, 1), (7, 1), (0, 1)]
+common_pair = commons[0] # Result (2, 5)
+common_value = commons[0][0] # Result = 2
+most_commons_count = commons[0][1] # Result = 5
