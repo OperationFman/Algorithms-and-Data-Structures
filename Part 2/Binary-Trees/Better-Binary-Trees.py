@@ -42,13 +42,13 @@ class BinaryTree:
 			self._view(cur.right)
 
 	def height(self):
-		if self.root != None:
-			return self._height(self.root, 0)
+		if self.root != None: #For Leetcode this was just root
+			return self._height(self.root, 0) #For Leetcode this was just root
 		else:
 			return 0
 
 	def _height(self, cur, cur_height):
-		if cur == None: return cur_height
+		if cur == None: return cur_height #For Leetcode this remained just cur
 		left_height = self._height(cur.left, cur_height + 1)
 		right_height = self._height(cur.right, cur_height + 1)
 		return max(left_height, right_height)
